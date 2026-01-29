@@ -28,7 +28,7 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
-st.title("📊 2024年 ESG 双重重要性议题矩阵")
+st.title("📊 ESG双重重要性议题矩阵生成工具 ")
 st.caption("支持动态增删议题 • 自定义气泡配色 • 自定义背景风格")
 
 # --- 3. 数据初始化 ---
@@ -240,4 +240,5 @@ st.markdown("---")
 csv = edited_df.to_csv(index=False).encode('utf-8-sig')
 
 st.download_button("📥 下载分析数据 (CSV)", csv, "Double_Materiality_Matrix.csv", "text/csv")
+
 
