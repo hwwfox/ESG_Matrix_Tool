@@ -13,7 +13,7 @@ st.set_page_config(
 # --- 2. 自定义 CSS ---
 st.markdown("""
     <style>
-    .block-container {padding-top: 1rem; padding-bottom: 2rem;}
+    .block-container {padding-top: 3.5rem; padding-bottom: 2rem;}
     h1 {font-size: 2.0rem !important;}
     
     /* 底部列表样式 */
@@ -238,4 +238,5 @@ render_category_list(col3, "公司治理", "治理", "🏢", edited_df[edited_df
 # --- 8. 底部下载 ---
 st.markdown("---")
 csv = edited_df.to_csv(index=False).encode('utf-8-sig')
+
 st.download_button("📥 下载分析数据 (CSV)", csv, "Double_Materiality_Matrix.csv", "text/csv")
