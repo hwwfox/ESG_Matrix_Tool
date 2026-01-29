@@ -13,8 +13,8 @@ st.set_page_config(
 # --- 2. 自定义 CSS ---
 st.markdown("""
     <style>
-    .block-container {padding-top: 3.5rem; padding-bottom: 2rem;}
-    h1 {font-size: 2.0rem !important;}
+    .block-container {padding-top: 3.5rem !important; padding-bottom: 2rem;}
+    h1 {font-size: 2.2rem !important; margin-bottom: 0.5rem;}
     
     /* 底部列表样式 */
     .category-header {
@@ -240,3 +240,4 @@ st.markdown("---")
 csv = edited_df.to_csv(index=False).encode('utf-8-sig')
 
 st.download_button("📥 下载分析数据 (CSV)", csv, "Double_Materiality_Matrix.csv", "text/csv")
+
